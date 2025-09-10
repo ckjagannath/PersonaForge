@@ -15,9 +15,8 @@ for mfile, ofile in zip(modern_files, original_files):
             o = o.strip()
             if m and o:
                 data.append({
-                    "instruction": "Rewrite the text in Shakespearean style.",
-                    "input": m,
-                    "output": o
+                    "source": f"Rewrite in Shakespearean style: {m}",
+                    "target": o
                 })
 
 with open("shakespeare.jsonl", "w", encoding="utf-8") as f:
